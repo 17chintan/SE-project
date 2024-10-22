@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e9ecef;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .custom-select {
+            position: relative;
+            width: 100%;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Live Code Editor</h1>
+        <label for="language-select">Coding Language</label>
+        <div class="custom-select">
+             <select id="language-select" onchange="selectLanguage()">
+                <option value="">Select Language</option>
+                <option value="editor.html">HTML</option>
+                <option value="editor.html">CSS</option>
+                <option value="editor.html">JS</option>
+                <option value="/index.html">Cpp</option>
+                <option value="/index.html">Python</option>
+                <option value="/index.html">Java</option>
+                <option value="/index.html">C</option>
+                <option value="/index.html">C#</option>
+            </select>
+            
+        </div>
+    </div>
+
+    <script>
+        function selectLanguage() {
+            const language = document.getElementById('language-select').value;
+            alert(`You selected: ${language}`);
+            if(language){
+                window.location.href=language
+            }
+            // Add your custom functionality here
+        }
+    </script>
+</body>
+</html>
